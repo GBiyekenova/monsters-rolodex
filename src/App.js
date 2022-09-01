@@ -17,9 +17,6 @@ class App extends Component {
         this.setState(
           () => {
             return { monsters: users };
-          },
-          () => {
-            console.log(this.state);
           }
         )
       );
@@ -27,9 +24,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.monsters.map((monster, index) => {
+        {this.state.monsters.map((monster) => {
           return (
-            <div key={index}>
+            <div key={monster.id}>
               <h1>{monster.name}</h1>
             </div>
           );
